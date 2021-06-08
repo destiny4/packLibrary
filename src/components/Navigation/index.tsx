@@ -61,7 +61,7 @@ const Navigation: FC<Props> = props => {
   } = props;
 
   return (
-    <View className='nav-bar'>
+    <View className='wiiMp nav-bar'>
       <View
         className='nav-bar-header'
         style={{

@@ -51,7 +51,7 @@ export default class Timer extends Component<IProps, IState> {
   render () {
     const { remainHour, remainMin, remainSec } = this.state
     return (
-      <View className='timer'>
+      <View className='wiiMp timer'>
         <Text>{remainHour}:{remainMin}:{remainSec}</Text>
       </View>
     )
