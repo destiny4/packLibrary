@@ -1,5 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import Test from '@wii-mp/component'
+import {Navigation} from '@wii-mp/component'
+console.log("test------cccccccccccc",Navigation)
+const a='123'
 
-ReactDom.render(<Test count="1000" />, document.getElementById('app'))
+ReactDom.render(  <Navigation allowBack>{a}</Navigation>,document.getElementById('app'))
