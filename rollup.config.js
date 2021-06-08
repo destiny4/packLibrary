@@ -6,7 +6,7 @@ import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupCopy from 'rollup-plugin-copy'
 import alias from '@rollup/plugin-alias'
 import image from '@rollup/plugin-image'
-import scssSmartAsset from 'rollup-plugin-scss-smart-asset'
+import scss from 'rollup-plugin-scss'
 import Package from './package.json'
 
 const resolveFile = path => NodePath.resolve(__dirname, path)
@@ -26,18 +26,18 @@ export default {
     {
       file: resolveFile(Package.main),
       format: 'cjs',
-      sourcemap: true
+      sourcemap: false
     },
     {
       file: resolveFile(Package.module),
       format: 'es',
-      sourcemap: true
+      sourcemap: false
     },
     {
       file: resolveFile(Package.browser),
       format: 'umd',
       name: 'taro-ui',
-      sourcemap: true,
+      sourcemap: false,
       globals: {
         react: 'React',
         '@tarojs/components': 'components',
@@ -69,7 +69,7 @@ export default {
       verbose: true
     }),
     image(),
-    scssSmartAsset({output:true}),
+    scss(),
     alias({
       entries:[{
         find:'@',replacement:resolveFile('src')

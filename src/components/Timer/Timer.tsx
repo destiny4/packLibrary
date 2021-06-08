@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text } from '@tarojs/components'
-
+import '@/styles/Timer.scss'
 interface IProps {
   startTime: number,
   endTime: number,

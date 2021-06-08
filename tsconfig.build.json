@@ -10,7 +10,7 @@
     "noUnusedParameters": false,
     "preserveConstEnums": true,
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "strictNullChecks": false,
     "resolveJsonModule": true,
     "target": "es2017",
