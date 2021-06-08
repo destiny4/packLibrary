@@ -4,7 +4,9 @@ import RollupNodeResolve from '@rollup/plugin-node-resolve'
 import RollupCommonjs from '@rollup/plugin-commonjs'
 import RollupTypescript from 'rollup-plugin-typescript2'
 import RollupCopy from 'rollup-plugin-copy'
-
+import alias from '@rollup/plugin-alias'
+import image from '@rollup/plugin-image'
+import scssSmartAsset from 'rollup-plugin-scss-smart-asset'
 import Package from './package.json'
 
 const resolveFile = path => NodePath.resolve(__dirname, path)
@@ -60,10 +62,18 @@ export default {
     RollupCopy({
       targets: [
         {
-          src: resolveFile('src/styles'),
-          dest: resolveFile('dist')
+          src: 'src/styles',
+          dest: 'dist'
         }
-      ]
+      ],
+      verbose: true
+    }),
+    image(),
+    scssSmartAsset({output:true}),
+    alias({
+      entries:[{
+        find:'@',replacement:resolveFile('src')
+      }]
     })
   ]
 }

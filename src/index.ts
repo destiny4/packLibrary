@@ -1,3 +1,2 @@
-import Timer from './components/timer/timer'
-
-export default Timer
+export { default as Navigation } from "./components/Navigation"
+export { default as Timer } from './components/timer/timer'

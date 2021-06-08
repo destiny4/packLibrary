@@ -1,12 +1,11 @@
 {
   "name": "@wii-mpp/component",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "browser": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
   "source": "src/index.ts",
   "author": "skyxchen",
-  "description": "Taro UI 库 React 版本范例",
   "types": "types/index.d.ts",
   "files": [
     "lib",
@@ -34,6 +33,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-image": "^2.0.6",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@tarojs/components": "^3.0.8",
@@ -67,5 +67,11 @@
     "@tarojs/react": "^3.0.8",
     "react": ">=16.13.0",
     "react-dom": ">=16.13.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-alias": "^3.1.2",
+    "rollup-plugin-postcss-inject-to-css": "^1.0.2",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-scss-smart-asset": "^0.0.2"
   }
 }
